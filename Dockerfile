@@ -1,13 +1,3 @@
-FROM node:18 AS build-stage
-
-WORKDIR /app
-
-COPY package*.json ./
-RUN npm install
-
-COPY . .
-RUN npm run build
-
 FROM php:8.2-apache
 
 RUN apt-get update && apt-get install -y \
@@ -21,9 +11,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 RUN a2enmod rewrite
 
 WORKDIR /var/www/html
-
 COPY . .
-COPY --from=build-stage /app/public/build ./public/build
 
 RUN composer install --no-dev --optimize-autoloader
 
