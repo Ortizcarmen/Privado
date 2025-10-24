@@ -6,7 +6,7 @@
     <title>Foro de programación</title>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    @fluxStyles
+ 
     @livewireStyles
 </head>
 <body>
