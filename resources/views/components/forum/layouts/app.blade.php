@@ -6,6 +6,8 @@
     <title>Foro de programación</title>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @fluxStyles
+    @livewireStyles
 </head>
 <body class="min-h-screen bg-gradient-to-b from-neutral-950 to-neutral-900 text-white">
     <div class="px-4 border-b border-neutral-800">
