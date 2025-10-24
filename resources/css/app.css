@@ -2,6 +2,9 @@
 @import '../../vendor/livewire/flux/dist/flux.css';
 
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 
 @source '../views';
